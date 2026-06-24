@@ -4,7 +4,7 @@ Theme URI: https://www.carfran.cl
 Author: Antigravity
 Author URI: https://www.carfran.cl
 Description: Modern Dark Mode & Glassmorphism custom theme for Carfran
-Version: 3.0.0
+Version: 3.0.2
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
@@ -303,6 +303,73 @@ a:hover {
   margin-bottom: 80px;
 }
 
+/* Little Trees Promo Section */
+.b2b-little-trees {
+  margin-bottom: 80px;
+}
+
+.lt-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 40px !important;
+  background: #fff;
+}
+
+.lt-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.lt-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.lt-title span {
+  color: #008000; /* Little Trees Green */
+}
+
+.lt-scents-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.lt-scents-list li {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.color-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.lt-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.lt-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
 /* --- Product Grid Overrides (Defeat WC Core) --- */
 .woocommerce ul.products {
   display: grid !important;
@@ -310,6 +377,12 @@ a:hover {
   gap: 30px !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* Fix for empty first space in grid (WooCommerce Clearfix Bug) */
+.woocommerce ul.products::before,
+.woocommerce ul.products::after {
+  display: none !important;
 }
 
 .woocommerce ul.products li.product {

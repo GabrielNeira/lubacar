@@ -54,6 +54,28 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<!-- Little Trees Highlight Section -->
+	<section class="b2b-little-trees">
+		<div class="container lt-container glass-panel">
+			<div class="lt-text">
+				<h2 class="lt-title">Especialistas en <span>Little Trees</span></h2>
+				<p>El producto estrella indiscutido. Contamos con el stock más grande y variado del mercado B2B.</p>
+				<ul class="lt-scents-list">
+					<li><span class="color-dot" style="background:#008000;"></span> Pino Royal</li>
+					<li><span class="color-dot" style="background:#FF0000;"></span> Manzana Canela</li>
+					<li><span class="color-dot" style="background:#FFFF00;"></span> Piña Colada</li>
+					<li><span class="color-dot" style="background:#0000FF;"></span> New Car Scent</li>
+					<li><span class="color-dot" style="background:#800080;"></span> Lavanda</li>
+					<li><span class="color-dot" style="background:#FFA500;"></span> Coco</li>
+				</ul>
+				<a href="<?php echo esc_url( home_url( '/?product_cat=pinos' ) ); ?>" class="btn-primary">Cotizar Aromas</a>
+			</div>
+			<div class="lt-image">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/little-trees.jpg" alt="Variedad de Aromas Little Trees">
+			</div>
+		</div>
+	</section>
+
 	<!-- Catalog Call to Action -->
 	<section class="b2b-catalog container">
 		<h2 style="text-align: center; margin-bottom: 40px;">Explora Nuestro Catálogo</h2>
