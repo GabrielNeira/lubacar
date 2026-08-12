@@ -34,10 +34,11 @@
 			<div class="footer-column footer-contact">
 				<h3>Contáctanos</h3>
 				<ul class="contact-list">
-					<li><i class="fa fa-phone"></i> <span>443009641 <br> 223001083 <br> 232348875</span></li>
-					<li><i class="fa fa-whatsapp"></i> <span>+56 9 3392 1690</span></li>
-					<li><i class="fa fa-envelope"></i> <span>ventas@carfran.cl</span></li>
-					<li><i class="fa fa-map-marker-alt"></i> <span>Av. América 0224, San Bernardo</span></li>
+					<li><i class="fas fa-phone"></i> <span>+56 9 3392 1690</span></li>
+					<li><i class="fab fa-whatsapp"></i> <span>+56 9 3392 1690</span></li>
+					<li><i class="fas fa-envelope"></i> <span>ventas@lubacar.cl</span></li>
+					<li><i class="fas fa-map-marker-alt"></i> <span>Av. América 0224, San Bernardo</span></li>
+					<li><i class="fab fa-instagram"></i> <span><a href="https://www.instagram.com/lubacarspa?igsh=dmNwcDBuaWZrNTls" target="_blank" rel="noopener noreferrer">@lubacarspa</a></span></li>
 				</ul>
 			</div>
 		</div>
