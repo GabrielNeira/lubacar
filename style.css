@@ -4,7 +4,7 @@ Theme URI: https://www.carfran.cl
 Author: Antigravity
 Author URI: https://www.carfran.cl
 Description: Modern Dark Mode & Glassmorphism custom theme for Carfran
-Version: 3.0.2
+Version: 3.0.3
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
@@ -697,6 +697,116 @@ a:hover {
 .header-nav-area {
   border-top: 1px solid var(--cf-glass-border);
   background: rgba(0,0,0,0.2);
+}
+
+.footer-logo img {
+  max-height: 48px;
+  width: auto;
+}
+
+/* --- Mobile menu toggle (hidden on desktop) --- */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--cf-glass-border);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--cf-text);
+  transition: var(--cf-transition);
+}
+
+.mobile-menu-toggle.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-toggle.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- Responsive header / nav --- */
+@media (max-width: 860px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .header-search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .site-logo img {
+    max-height: 42px;
+  }
+
+  .header-cart .cart-label {
+    display: none;
+  }
+
+  .header-cart .cart-link {
+    padding: 10px 14px;
+  }
+
+  .header-nav-area {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .header-nav-area.nav-open {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .main-navigation ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .main-navigation li {
+    border-bottom: 1px solid var(--cf-glass-border);
+  }
+
+  .main-navigation a {
+    display: block;
+    padding: 14px 10px;
+  }
+
+  /* Submenus: no hover on touch, so show them inline/stacked instead */
+  .main-navigation ul ul {
+    display: block;
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 8px 20px;
+    min-width: 0;
+    background: transparent;
+  }
+
+  .main-navigation ul ul a {
+    padding: 10px;
+    font-size: 13px;
+    opacity: 0.85;
+  }
 }
 
 /* --- Footer Overhauls --- */

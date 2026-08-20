@@ -2,13 +2,7 @@
 		<div class="container footer-grid">
 			<div class="footer-column footer-brand">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer-logo" style="display:inline-block; margin-bottom:20px;">
-					<div class="lubacar-logo" style="transform: scale(0.8); transform-origin: left;">
-						<div class="checkered-flag"></div>
-						<div class="logo-text">
-							<span class="lubacar">LUBACAR</span>
-							<span class="subtext">PRODUCTOS AUTOMOTRICES</span>
-						</div>
-					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-lubacar.png" alt="LubaCar - Productos Automotrices" width="690" height="198">
 				</a>
 				<p>Distribuidor Oficial de Lubricantes Goodyear. Somos especialistas en abastecimiento B2B para talleres, industrias y flotas a lo largo de todo Chile.</p>
 			</div>

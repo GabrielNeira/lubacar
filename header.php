@@ -17,15 +17,13 @@
 		<div class="container header-top-area">
 			<div class="site-branding">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-logo">
-					<div class="lubacar-logo">
-						<div class="checkered-flag"></div>
-						<div class="logo-text">
-							<span class="lubacar">LUBACAR</span>
-							<span class="subtext">PRODUCTOS AUTOMOTRICES</span>
-						</div>
-					</div>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-lubacar.png" alt="LubaCar - Productos Automotrices" width="690" height="198">
 				</a>
 			</div><!-- .site-branding -->
+
+			<button type="button" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú">
+				<span></span><span></span><span></span>
+			</button>
 
 			<?php if ( class_exists( 'WooCommerce' ) ) : ?>
 			<div class="header-search">
@@ -72,3 +70,18 @@
 			</nav>
 		</div>
 	</header><!-- #masthead -->
+
+	<script>
+	(function () {
+		var toggle = document.getElementById( 'mobile-menu-toggle' );
+		var navArea = document.querySelector( '.header-nav-area' );
+		if ( ! toggle || ! navArea ) {
+			return;
+		}
+		toggle.addEventListener( 'click', function () {
+			var isOpen = navArea.classList.toggle( 'nav-open' );
+			toggle.classList.toggle( 'is-active', isOpen );
+			toggle.setAttribute( 'aria-expanded', isOpen ? 'true' : 'false' );
+		} );
+	})();
+	</script>
