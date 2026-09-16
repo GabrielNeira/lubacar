@@ -200,3 +200,17 @@ function carfran_auto_create_cart_page() {
     }
 }
 
+/**
+ * Las miniaturas de la galería de producto (usadas por el slider de WooCommerce)
+ * vienen recortadas a un cuadrado 100x100 por defecto ("crop" a true). Para envases
+ * altos y angostos (aceites, líquidos) eso corta la tapa y la base y deja solo la
+ * etiqueta del medio. Se desactiva el recorte para que escale proporcional y se vea
+ * el producto completo. Solo afecta imágenes subidas/regeneradas después de este cambio.
+ */
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+	$size['width']  = 100;
+	$size['height'] = 100;
+	$size['crop']   = 0;
+	return $size;
+} );
+
