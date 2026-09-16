@@ -72,7 +72,10 @@ function carfran_v2_scripts() {
 	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0' );
 
 	// Enqueue Main Stylesheet
-	wp_enqueue_style( 'carfran-v2-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	// Cache-busting por fecha de modificación del archivo en vez del número de versión del
+	// tema: así el navegador/CDN detecta el cambio automáticamente en cada deploy, sin
+	// depender de acordarse de subir "Version" en el header de style.css cada vez.
+	wp_enqueue_style( 'carfran-v2-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'carfran_v2_scripts' );
 
