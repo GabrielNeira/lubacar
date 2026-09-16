@@ -18,7 +18,6 @@ get_header( 'shop' ); ?>
 		}
 		if ( ! $product ) continue;
 		
-		$image_html = $product->get_image( 'large' );
 		$title = $product->get_title();
 		$price_html = $product->get_price_html();
 		$short_description = apply_filters( 'woocommerce_short_description', $product->get_short_description() );
@@ -33,7 +32,7 @@ get_header( 'shop' ); ?>
 		
 		<div class="cf-single-product glass-panel">
 			<div class="cf-single-product-image">
-				<?php echo $image_html; ?>
+				<?php woocommerce_show_product_images(); ?>
 			</div>
 			
 			<div class="cf-single-product-summary">
